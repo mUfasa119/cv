@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Belguermi Mustapha — Ingénieur Réseaux &amp; Cybersécurité</title>
+<meta name="description" content="Belguermi Mustapha — Ingénieur en réseaux et cybersécurité. Spécialiste en infrastructures auto-réparatrices, supervision et sécurité des systèmes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-deep:#080C16;
+    --bg-panel:#0E1526;
+    --bg-panel-2:#141D34;
+    --line: rgba(233,240,255,0.08);
+    --line-strong: rgba(233,240,255,0.16);
+    --text-primary:#EAF0FA;
+    --text-muted:#8A97B3;
+    --text-faint:#5B6684;
+    --cyan:#4FD8C4;
+    --cyan-dim: rgba(79,216,196,0.14);
+    --amber:#F5A544;
+    --red:#E8615D;
+    --font-display:'Sora', sans-serif;
+    --font-body:'Inter', sans-serif;
+    --font-mono:'JetBrains Mono', monospace;
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg-deep);
+    color:var(--text-primary);
+    font-family:var(--font-body);
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  body::before{
+    content:"";
+    position:fixed; inset:0;
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size: 64px 64px;
+    opacity:0.35;
+    pointer-events:none;
+    z-index:0;
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 0%, transparent 75%);
+  }
+  a{color:inherit; text-decoration:none;}
+  img{display:block; max-width:100%;}
+  .wrap{max-width:1180px; margin:0 auto; padding:0 32px; position:relative; z-index:1;}
+  ::selection{background:var(--cyan); color:#04120F;}
+
+  :focus-visible{
+    outline: 2px solid var(--cyan);
+    outline-offset: 3px;
+    border-radius:2px;
+  }
+
+  .mono{font-family:var(--font-mono);}
+  .eyebrow{
+    font-family:var(--font-mono);
+    font-size:12.5px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--cyan);
+    display:flex; align-items:center; gap:10px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:7px; height:7px;
+    border-radius:50%;
+    background:var(--cyan);
+    box-shadow:0 0 0 4px var(--cyan-dim);
+  }
+
+  /* ---------- NAV ---------- */
+  header{
+    position:fixed; top:0; left:0; right:0;
+    z-index:50;
+    background:rgba(8,12,22,0.72);
+    backdrop-filter: blur(14px);
+    border-bottom:1px solid var(--line);
+  }
+  nav.wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    height:72px;
+  }
+  .brand{
+    font-family:var(--font-mono);
+    font-size:15px;
+    font-weight:600;
+    letter-spacing:0.02em;
+    display:flex; align-items:center; gap:10px;
+  }
+  .brand .dot{
+    width:8px;height:8px;border-radius:50%;
+    background:var(--cyan);
+    box-shadow:0 0 12px var(--cyan);
+    animation:pulse 2.4s ease-in-out infinite;
+  }
+  @keyframes pulse{
+    0%,100%{opacity:1; transform:scale(1);}
+    50%{opacity:0.5; transform:scale(0.8);}
+  }
+  .navlinks{display:flex; gap:34px; align-items:center;}
+  .navlinks a{
+    font-size:13.5px;
+    color:var(--text-muted);
+    font-family:var(--font-mono);
+    letter-spacing:0.02em;
+    transition:color 0.2s;
+    position:relative;
+  }
+  .navlinks a:hover{color:var(--text-primary);}
+  .navlinks a::after{
+    content:"";
+    position:absolute; left:0; bottom:-6px;
+    width:0; height:1px; background:var(--cyan);
+    transition:width 0.25s;
+  }
+  .navlinks a:hover::after{width:100%;}
+  .nav-cta{
+    font-family:var(--font-mono);
+    font-size:13px;
+    padding:9px 16px;
+    border:1px solid var(--line-strong);
+    border-radius:6px;
+    color:var(--text-primary);
+    transition:all 0.2s;
+  }
+  .nav-cta:hover{border-color:var(--cyan); color:var(--cyan); background:var(--cyan-dim);}
+  .navmenu-toggle{display:none;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    padding:168px 0 100px;
+    position:relative;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap:64px;
+    align-items:center;
+  }
+  .hero h1{
+    font-family:var(--font-display);
+    font-size:clamp(38px, 5vw, 60px);
+    font-weight:700;
+    line-height:1.05;
+    margin:18px 0 6px;
+    letter-spacing:-0.01em;
+  }
+  .hero h1 .accent{color:var(--cyan);}
+  .hero .role{
+    font-family:var(--font-mono);
+    font-size:16px;
+    color:var(--text-muted);
+    margin-bottom:22px;
+  }
+  .hero p.lede{
+    font-size:16.5px;
+    color:var(--text-muted);
+    max-width:520px;
+    margin-bottom:34px;
+  }
+  .hero-actions{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:46px;}
+  .btn{
+    font-family:var(--font-mono);
+    font-size:13.5px;
+    padding:13px 22px;
+    border-radius:7px;
+    display:inline-flex; align-items:center; gap:8px;
+    transition:all 0.2s;
+    border:1px solid transparent;
+  }
+  .btn-primary{
+    background:var(--cyan);
+    color:#04120F;
+    font-weight:600;
+  }
+  .btn-primary:hover{background:#6EE3D1; transform:translateY(-1px);}
+  .btn-ghost{
+    border-color:var(--line-strong);
+    color:var(--text-primary);
+  }
+  .btn-ghost:hover{border-color:var(--cyan); color:var(--cyan);}
+
+  .stat-row{
+    display:flex; gap:0;
+    border-top:1px solid var(--line);
+  }
+  .stat{
+    flex:1;
+    padding:18px 20px 0 0;
+    border-right:1px solid var(--line);
+  }
+  .stat:last-child{border-right:none;}
+  .stat .num{
+    font-family:var(--font-display);
+    font-size:26px;
+    font-weight:700;
+    color:var(--text-primary);
+  }
+  .stat .num span{color:var(--cyan);}
+  .stat .label{
+    font-family:var(--font-mono);
+    font-size:11.5px;
+    color:var(--text-faint);
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    margin-top:4px;
+  }
+
+  /* hero portrait panel */
+  .hero-photo{
+    position:relative;
+    border-radius:16px;
+    overflow:hidden;
+    border:1px solid var(--line-strong);
+    background:var(--bg-panel);
+    aspect-ratio: 4/5;
+  }
+  .hero-photo img{
+    width:100%; height:100%; object-fit:cover;
+    filter: saturate(0.92) contrast(1.03);
+  }
+  .hero-photo::after{
+    content:"";
+    position:absolute; inset:0;
+    background:linear-gradient(180deg, transparent 55%, rgba(8,12,22,0.85) 100%);
+  }
+  .scan-frame{
+    position:absolute; inset:14px;
+    border:1px solid rgba(79,216,196,0.35);
+    border-radius:10px;
+    pointer-events:none;
+    z-index:2;
+  }
+  .scan-frame::before, .scan-frame::after{
+    content:"";
+    position:absolute; width:18px; height:18px;
+    border:2px solid var(--cyan);
+  }
+  .scan-frame::before{top:-1px; left:-1px; border-right:none; border-bottom:none;}
+  .scan-frame::after{bottom:-1px; right:-1px; border-left:none; border-top:none;}
+  .hud-chip{
+    position:absolute;
+    z-index:3;
+    font-family:var(--font-mono);
+    font-size:11px;
+    background:rgba(8,12,22,0.85);
+    border:1px solid var(--line-strong);
+    color:var(--cyan);
+    padding:6px 10px;
+    border-radius:5px;
+    backdrop-filter: blur(6px);
+    display:flex; align-items:center; gap:6px;
+  }
+  .hud-chip::before{content:"●"; font-size:8px;}
+  .hud-chip.top{top:22px; left:22px;}
+  .hud-chip.bottom{bottom:22px; left:22px; right:22px; color:var(--text-primary); justify-content:space-between;}
+
+  /* ---------- SECTION SHARED ---------- */
+  section{padding:110px 0; position:relative; border-top:1px solid var(--line);}
+  .section-head{
+    display:flex; justify-content:space-between; align-items:flex-end;
+    margin-bottom:56px; gap:24px; flex-wrap:wrap;
+  }
+  .section-head h2{
+    font-family:var(--font-display);
+    font-size:clamp(28px, 3.4vw, 40px);
+    font-weight:700;
+    margin-top:14px;
+    letter-spacing:-0.01em;
+  }
+  .section-head .note{
+    font-family:var(--font-mono);
+    font-size:13px;
+    color:var(--text-faint);
+    max-width:280px;
+    text-align:right;
+  }
+
+  /* ---------- ABOUT ---------- */
+  .about-grid{
+    display:grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap:64px;
+    align-items:start;
+  }
+  .about-photo{
+    border-radius:14px;
+    overflow:hidden;
+    border:1px solid var(--line-strong);
+    position:sticky; top:100px;
+  }
+  .about-photo img{width:100%; filter:saturate(0.92);}
+  .about-text p{
+    font-size:16.5px;
+    color:var(--text-muted);
+    margin-bottom:20px;
+  }
+  .about-text strong{color:var(--text-primary); font-weight:600;}
+  .facts{
+    margin-top:36px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+    border-radius:10px;
+    overflow:hidden;
+  }
+  .fact{
+    background:var(--bg-panel);
+    padding:18px 20px;
+  }
+  .fact .k{
+    font-family:var(--font-mono);
+    font-size:10.5px;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    color:var(--text-faint);
+    margin-bottom:6px;
+  }
+  .fact .v{font-size:14.5px; color:var(--text-primary);}
+
+  /* ---------- SKILLS ---------- */
+  .skills-grid{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+    border-radius:12px;
+    overflow:hidden;
+  }
+  .skill-cat{
+    background:var(--bg-panel);
+    padding:28px 30px;
+    transition:background 0.2s;
+  }
+  .skill-cat:hover{background:var(--bg-panel-2);}
+  .skill-cat h3{
+    font-family:var(--font-mono);
+    font-size:12.5px;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    color:var(--cyan);
+    margin-bottom:16px;
+  }
+  .tag-list{display:flex; flex-wrap:wrap; gap:8px;}
+  .tag{
+    font-family:var(--font-mono);
+    font-size:12.5px;
+    padding:6px 11px;
+    border:1px solid var(--line-strong);
+    border-radius:5px;
+    color:var(--text-muted);
+    transition:all 0.2s;
+  }
+  .tag:hover{border-color:var(--cyan); color:var(--cyan); background:var(--cyan-dim);}
+
+  /* ---------- NETWORK DEMO (signature) ---------- */
+  .demo-section{
+    background:var(--bg-panel);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+  .demo-inner{
+    display:grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap:56px;
+    align-items:center;
+  }
+  .demo-copy p{color:var(--text-muted); font-size:15.5px; margin:16px 0 26px;}
+  .demo-log{
+    font-family:var(--font-mono);
+    font-size:12.5px;
+    background:var(--bg-deep);
+    border:1px solid var(--line-strong);
+    border-radius:8px;
+    padding:14px 16px;
+    color:var(--text-faint);
+    min-height:96px;
+  }
+  .demo-log .line{margin-bottom:5px; opacity:0; transform:translateY(4px); transition:all 0.35s;}
+  .demo-log .line.show{opacity:1; transform:translateY(0);}
+  .demo-log .ok{color:var(--cyan);}
+  .demo-log .warn{color:var(--red);}
+  .demo-log .fix{color:var(--amber);}
+  .replay-btn{
+    margin-top:18px;
+    font-family:var(--font-mono);
+    font-size:12.5px;
+    color:var(--text-muted);
+    border:1px solid var(--line-strong);
+    padding:9px 16px;
+    border-radius:6px;
+    cursor:pointer;
+    background:transparent;
+  }
+  .replay-btn:hover{color:var(--cyan); border-color:var(--cyan);}
+  .netviz{
+    background:var(--bg-deep);
+    border:1px solid var(--line-strong);
+    border-radius:12px;
+    aspect-ratio:4/3;
+    position:relative;
+    overflow:hidden;
+  }
+  .netviz svg{width:100%; height:100%;}
+
+  /* ---------- PROJECTS ---------- */
+  .project-list{display:flex; flex-direction:column; gap:1px; background:var(--line); border:1px solid var(--line); border-radius:12px; overflow:hidden;}
+  .project{
+    background:var(--bg-panel);
+    padding:34px 36px;
+    display:grid;
+    grid-template-columns: 220px 1fr;
+    gap:36px;
+  }
+  .project-meta{}
+  .project-meta .idx{
+    font-family:var(--font-mono);
+    font-size:12px;
+    color:var(--text-faint);
+    margin-bottom:8px;
+  }
+  .project-meta h3{
+    font-family:var(--font-display);
+    font-size:19px;
+    font-weight:600;
+    line-height:1.3;
+  }
+  .project-meta .tagline{
+    font-family:var(--font-mono);
+    font-size:11.5px;
+    color:var(--cyan);
+    margin-top:10px;
+  }
+  .project ul{list-style:none; display:flex; flex-direction:column; gap:11px;}
+  .project li{
+    font-size:14.5px;
+    color:var(--text-muted);
+    padding-left:18px;
+    position:relative;
+  }
+  .project li::before{
+    content:"";
+    position:absolute; left:0; top:8px;
+    width:6px; height:1px;
+    background:var(--cyan);
+  }
+
+  /* ---------- EXPERIENCE TIMELINE ---------- */
+  .timeline{position:relative; padding-left:36px;}
+  .timeline::before{
+    content:"";
+    position:absolute; left:5px; top:6px; bottom:6px;
+    width:1px;
+    background:linear-gradient(var(--cyan), var(--line) 90%);
+  }
+  .tl-item{position:relative; padding-bottom:52px;}
+  .tl-item:last-child{padding-bottom:0;}
+  .tl-item::before{
+    content:"";
+    position:absolute; left:-36px; top:5px;
+    width:11px; height:11px; border-radius:50%;
+    background:var(--bg-deep);
+    border:2px solid var(--cyan);
+  }
+  .tl-date{
+    font-family:var(--font-mono);
+    font-size:12px;
+    color:var(--text-faint);
+    margin-bottom:8px;
+  }
+  .tl-item h3{
+    font-family:var(--font-display);
+    font-size:19px;
+    font-weight:600;
+  }
+  .tl-item .org{
+    font-family:var(--font-mono);
+    font-size:12.5px;
+    color:var(--cyan);
+    margin:6px 0 16px;
+  }
+  .tl-item ul{list-style:none; display:flex; flex-direction:column; gap:9px; max-width:680px;}
+  .tl-item li{
+    font-size:14.5px; color:var(--text-muted); padding-left:18px; position:relative;
+  }
+  .tl-item li::before{
+    content:"";
+    position:absolute; left:0; top:8px;
+    width:6px; height:1px; background:var(--text-faint);
+  }
+
+  /* ---------- EDUCATION + LANGUAGES ---------- */
+  .split-grid{
+    display:grid;
+    grid-template-columns: 1.4fr 0.6fr;
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+    border-radius:12px;
+    overflow:hidden;
+  }
+  .edu-block{background:var(--bg-panel); padding:36px;}
+  .edu-item + .edu-item{margin-top:34px; padding-top:34px; border-top:1px solid var(--line);}
+  .edu-item .tl-date{margin-bottom:6px;}
+  .edu-item h3{font-family:var(--font-display); font-size:18px; font-weight:600; margin-bottom:4px;}
+  .edu-item .org{font-family:var(--font-mono); font-size:12.5px; color:var(--cyan); margin-bottom:14px;}
+  .edu-item ul{list-style:none; display:flex; flex-direction:column; gap:8px;}
+  .edu-item li{font-size:14px; color:var(--text-muted); padding-left:18px; position:relative;}
+  .edu-item li::before{content:""; position:absolute; left:0; top:8px; width:6px; height:1px; background:var(--text-faint);}
+  .cert-badge{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:var(--font-mono); font-size:11.5px;
+    color:var(--amber);
+    border:1px solid rgba(245,165,68,0.35);
+    background:rgba(245,165,68,0.08);
+    padding:6px 12px; border-radius:20px;
+    margin-top:14px;
+  }
+  .lang-block{background:var(--bg-panel); padding:36px; display:flex; flex-direction:column; gap:24px;}
+  .lang-item .head{display:flex; justify-content:space-between; align-items:baseline; margin-bottom:8px;}
+  .lang-item .name{font-family:var(--font-display); font-weight:600; font-size:15px;}
+  .lang-item .level{font-family:var(--font-mono); font-size:11px; color:var(--text-faint);}
+  .bar{height:5px; background:var(--bg-deep); border-radius:4px; overflow:hidden; border:1px solid var(--line);}
+  .bar span{display:block; height:100%; background:var(--cyan); border-radius:4px;}
+
+  /* ---------- CONTACT / FOOTER ---------- */
+  footer{
+    padding:100px 0 50px;
+  }
+  .contact-inner{
+    text-align:center;
+    max-width:640px;
+    margin:0 auto 70px;
+  }
+  .contact-inner h2{
+    font-family:var(--font-display);
+    font-size:clamp(30px,4vw,44px);
+    font-weight:700;
+    margin:16px 0 18px;
+  }
+  .contact-inner p{color:var(--text-muted); font-size:16px; margin-bottom:34px;}
+  .contact-actions{display:flex; gap:14px; justify-content:center; flex-wrap:wrap;}
+  .foot-row{
+    display:flex; justify-content:space-between; align-items:center;
+    padding-top:34px; border-top:1px solid var(--line);
+    font-family:var(--font-mono); font-size:12px; color:var(--text-faint);
+    flex-wrap:wrap; gap:14px;
+  }
+  .foot-links{display:flex; gap:22px;}
+  .foot-links a:hover{color:var(--cyan);}
+
+  /* ---------- ANIMS / SCROLL REVEAL ---------- */
+  .reveal{opacity:0; transform:translateY(18px); transition:opacity 0.7s ease, transform 0.7s ease;}
+  .reveal.in{opacity:1; transform:translateY(0);}
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important; transition:none !important;}
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 900px){
+    .navlinks{display:none;}
+    .hero-grid{grid-template-columns:1fr; gap:44px;}
+    .hero{padding:150px 0 70px;}
+    .about-grid{grid-template-columns:1fr;}
+    .about-photo{position:static; max-width:280px;}
+    .skills-grid{grid-template-columns:1fr;}
+    .demo-inner{grid-template-columns:1fr;}
+    .project{grid-template-columns:1fr; gap:16px;}
+    .split-grid{grid-template-columns:1fr;}
+    .stat-row{flex-wrap:wrap;}
+    .stat{flex:0 0 50%; margin-bottom:16px;}
+    section{padding:72px 0;}
+    .wrap{padding:0 20px;}
+    .section-head{flex-direction:column; align-items:flex-start;}
+    .section-head .note{text-align:left;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <div class="brand"><span class="dot"></span>BELGUERMI<span style="color:var(--text-faint)">.MUSTAPHA</span></div>
+    <div class="navlinks">
+      <a href="#about">Profil</a>
+      <a href="#skills">Compétences</a>
+      <a href="#network">Auto-réparation</a>
+      <a href="#projects">Projets</a>
+      <a href="#experience">Expérience</a>
+      <a href="#education">Formation</a>
+    </div>
+    <a href="#contact" class="nav-cta">Contact →</a>
+  </nav>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" style="border-top:none; padding-top:168px;">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Disponible pour opportunités · Alger, Algérie</div>
+        <h1>Belguermi<br>Mustapha<span class="accent">.</span></h1>
+        <div class="role">Ingénieur Réseaux &amp; Cybersécurité — Infrastructures auto-réparatrices</div>
+        <p class="lede">Je conçois des réseaux qui se défendent et se réparent eux-mêmes : supervision temps réel, détection d'anomalies par IA, haute disponibilité et durcissement de la sécurité — du datacenter jusqu'au poste de travail.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">Voir mes projets ↓</a>
+          <a href="BELGUERMI_Mustapha_CV.pdf" class="btn btn-ghost" download>Télécharger le CV (PDF)</a>
+        </div>
+        <div class="stat-row">
+          <div class="stat">
+            <div class="num"><span>18</span>/20</div>
+            <div class="label">Major de promotion</div>
+          </div>
+          <div class="stat">
+            <div class="num">1er</div>
+            <div class="label">WorldSkills Algérie</div>
+          </div>
+          <div class="stat">
+            <div class="num">6</div>
+            <div class="label">Mois — Algérie Télécom</div>
+          </div>
+          <div class="stat">
+            <div class="num">CTF</div>
+            <div class="label">Cybears National</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-photo">
+        <img src="img/hero.jpg" alt="Belguermi Mustapha, ingénieur réseaux et cybersécurité, travaillant sur son poste avec des tableaux de bord de sécurité en arrière-plan.">
+        <div class="scan-frame"></div>
+        <div class="hud-chip top">SEC.MONITOR</div>
+        <div class="hud-chip bottom"><span>THREAT_LEVEL: NOMINAL</span><span class="mono" style="color:var(--cyan)">●LIVE</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap">
+      <div class="about-grid">
+        <div class="about-photo reveal">
+          <img src="img/portrait.jpg" alt="Portrait de Belguermi Mustapha en costume, debout dans un environnement de sécurité informatique.">
+        </div>
+        <div class="about-text reveal">
+          <div class="eyebrow">Profil</div>
+          <h2 style="font-family:var(--font-display); font-size:clamp(26px,3vw,34px); font-weight:700; margin:14px 0 22px;">Du réseau qui tombe au réseau qui se corrige.</h2>
+          <p><strong>Ingénieur en réseaux et cybersécurité orienté résultats</strong>, titulaire d'un diplôme de Technicien Supérieur obtenu major de promotion (18/20). Spécialisé dans les infrastructures réseau intelligentes, les systèmes d'auto-réparation basés sur l'IA et l'automatisation de la cybersécurité.</p>
+          <p>Expérience pratique dans la conception de solutions de supervision complètes, d'architectures réseau d'entreprise, de répartiteurs de charge à haute disponibilité et de systèmes VoIP. A effectué un stage professionnel au sein du <strong>département Sécurité IT d'Algérie Télécom</strong>, l'opérateur télécom national.</p>
+          <p>Compétences éprouvées en conditions réelles : compétition nationale de cybersécurité <strong>Cybears (CTF)</strong> et représentation de l'Algérie à la compétition <strong>WorldSkills</strong> en administration des systèmes réseau.</p>
+
+          <div class="facts">
+            <div class="fact"><div class="k">Localisation</div><div class="v">Birtouta, Alger, Algérie</div></div>
+            <div class="fact"><div class="k">Né le</div><div class="v">25/10/2004</div></div>
+            <div class="fact"><div class="k">Email</div><div class="v">belguermimustapha@gmail.com</div></div>
+            <div class="fact"><div class="k">Téléphone</div><div class="v">+213 698 50 99 48</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <div class="eyebrow">Boîte à outils</div>
+          <h2>Compétences techniques</h2>
+        </div>
+        <div class="note">Classées par domaine — de la détection d'anomalies par IA jusqu'à l'administration système bas niveau.</div>
+      </div>
+
+      <div class="skills-grid reveal">
+        <div class="skill-cat">
+          <h3>IA &amp; Systèmes intelligents</h3>
+          <div class="tag-list">
+            <span class="tag">Machine Learning (Réseaux)</span>
+            <span class="tag">Auto-réparation (Self-Healing)</span>
+            <span class="tag">Détection d'anomalies</span>
+            <span class="tag">IDS basé sur l'IA</span>
+          </div>
+        </div>
+        <div class="skill-cat">
+          <h3>Supervision &amp; Observabilité</h3>
+          <div class="tag-list">
+            <span class="tag">Grafana</span>
+            <span class="tag">Prometheus</span>
+            <span class="tag">Loki</span>
+            <span class="tag">Node Exporter</span>
+            <span class="tag">Promtail</span>
+            <span class="tag">Alertes &amp; Notifications</span>
+          </div>
+        </div>
+        <div class="skill-cat">
+          <h3>Haute disponibilité &amp; Charge</h3>
+          <div class="tag-list">
+            <span class="tag">Nginx</span>
+            <span class="tag">HAProxy</span>
+            <span class="tag">Architecture Failover</span>
+            <span class="tag">Répartition de charge</span>
+          </div>
+        </div>
+        <div class="skill-cat">
+          <h3>Pare-feu &amp; Sécurité</h3>
+          <div class="tag-list">
+            <span class="tag">FortiGate</span>
+            <span class="tag">IDS / IPS</span>
+            <span class="tag">Suricata</span>
+            <span class="tag">IPTables</span>
+            <span class="tag">Metasploit</span>
+            <span class="tag">Tests d'intrusion</span>
+          </div>
+        </div>
+        <div class="skill-cat">
+          <h3>Réseaux</h3>
+          <div class="tag-list">
+            <span class="tag">RIP / OSPF</span>
+            <span class="tag">ACL</span>
+            <span class="tag">IPSec / VPN</span>
+            <span class="tag">NAT</span>
+            <span class="tag">VLAN</span>
+            <span class="tag">DHCP</span>
+            <span class="tag">VoIP / SIP</span>
+            <span class="tag">Active Directory</span>
+            <span class="tag">GPO</span>
+            <span class="tag">Cisco IOS</span>
+          </div>
+        </div>
+        <div class="skill-cat">
+          <h3>Systèmes &amp; Outils</h3>
+          <div class="tag-list">
+            <span class="tag">Windows Server</span>
+            <span class="tag">Linux / Ubuntu</span>
+            <span class="tag">Kali Linux</span>
+            <span class="tag">Debian</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Ansible</span>
+            <span class="tag">SSH</span>
+            <span class="tag">DDNS</span>
+            <span class="tag">SMB</span>
+            <span class="tag">Watchdogs</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NETWORK DEMO SIGNATURE -->
+  <section id="network" class="demo-section">
+    <div class="wrap">
+      <div class="demo-inner">
+        <div class="demo-copy reveal">
+          <div class="eyebrow">Signature — Projet de fin d'études</div>
+          <h2 style="font-family:var(--font-display); font-size:clamp(26px,3vw,34px); font-weight:700; margin:14px 0 6px;">Réseau cognitif auto-réparateur</h2>
+          <p>Une infrastructure pilotée par l'IA, entraînée sur les schémas de trafic réseau pour détecter les anomalies, prédire les pannes et reconfigurer le routage — sans intervention humaine. Noté 18/20, projet classé 1er de la promotion. Cliquez pour rejouer la panne.</p>
+          <div class="demo-log" id="demoLog"></div>
+          <button class="replay-btn" id="replayBtn">↻ Rejouer la panne / auto-réparation</button>
+        </div>
+        <div class="netviz reveal" id="netviz">
+          <svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg">
+            <!-- links -->
+            <g id="links" stroke-width="1.6" fill="none">
+              <line id="l-A-C" x1="90" y1="80"  x2="240" y2="180" stroke="var(--line-strong)"/>
+              <line id="l-C-E" x1="240" y1="180" x2="390" y2="80"  stroke="var(--line-strong)"/>
+              <line id="l-A-B" x1="90" y1="80"  x2="90" y2="280"  stroke="var(--line-strong)"/>
+              <line id="l-B-D" x1="90" y1="280" x2="240" y2="280" stroke="var(--line-strong)"/>
+              <line id="l-D-E" x1="240" y1="280" x2="390" y2="80"  stroke="var(--line-strong)"/>
+              <line id="l-D-F" x1="240" y1="280" x2="390" y2="280" stroke="var(--line-strong)"/>
+              <line id="l-E-F" x1="390" y1="80"  x2="390" y2="280" stroke="var(--line-strong)"/>
+              <line id="l-C-D" x1="240" y1="180" x2="240" y2="280" stroke="var(--line-strong)"/>
+            </g>
+            <!-- reroute path (hidden until triggered) -->
+            <path id="reroute" d="M240,180 L240,280 L390,280 L390,80" fill="none" stroke="var(--cyan)" stroke-width="2.4" stroke-dasharray="6 6" opacity="0"/>
+
+            <!-- nodes -->
+            <g font-family="JetBrains Mono, monospace" font-size="10" fill="#8A97B3">
+              <g id="n-A"><circle cx="90" cy="80" r="7" fill="#0E1526" stroke="#4FD8C4" stroke-width="2"/><text x="90" y="62" text-anchor="middle">EDGE-A</text></g>
+              <g id="n-B"><circle cx="90" cy="280" r="7" fill="#0E1526" stroke="#4FD8C4" stroke-width="2"/><text x="90" y="304" text-anchor="middle">EDGE-B</text></g>
+              <g id="n-C"><circle cx="240" cy="180" r="8" fill="#0E1526" stroke="#4FD8C4" stroke-width="2"/><text x="240" y="160" text-anchor="middle">CORE-1</text></g>
+              <g id="n-D"><circle cx="240" cy="280" r="8" fill="#0E1526" stroke="#4FD8C4" stroke-width="2"/><text x="240" y="304" text-anchor="middle">CORE-2</text></g>
+              <g id="n-E"><circle cx="390" cy="80" r="7" fill="#0E1526" stroke="#4FD8C4" stroke-width="2"/><text x="390" y="62" text-anchor="middle">SRV-01</text></g>
+              <g id="n-F"><circle cx="390" cy="280" r="7" fill="#0E1526" stroke="#4FD8C4" stroke-width="2"/><text x="390" y="304" text-anchor="middle">SRV-02</text></g>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <div class="eyebrow">Réalisations</div>
+          <h2>Projets</h2>
+        </div>
+        <div class="note">Projets de laboratoire et de recherche personnelle, conçus dans des conditions proches de la production.</div>
+      </div>
+
+      <div class="project-list">
+        <div class="project reveal">
+          <div class="project-meta">
+            <div class="idx">2025 – 2026</div>
+            <h3>Réseau cognitif auto-réparateur</h3>
+            <div class="tagline">Infrastructure pilotée par l'IA</div>
+          </div>
+          <ul>
+            <li>Conception et réalisation d'une infrastructure réseau pilotée par l'IA capable d'auto-réparation autonome et de réponse aux menaces en temps réel.</li>
+            <li>Intégration d'un modèle de Machine Learning entraîné sur les schémas de trafic réseau pour détecter les anomalies, prédire les pannes et reconfigurer automatiquement le routage.</li>
+            <li>Mise en place d'un mécanisme de blocage automatique des attaquants — le système identifie les comportements malveillants et applique dynamiquement des règles de pare-feu sans intervention humaine.</li>
+            <li>Architecture combinant des agents de supervision intelligents, un moteur d'inférence ML et des scripts de remédiation automatisée pour une résolution des incidents sans interruption de service.</li>
+            <li><strong style="color:var(--amber)">Projet de fin d'études — noté 18/20, classé 1er de la promotion.</strong></li>
+          </ul>
+        </div>
+
+        <div class="project reveal">
+          <div class="project-meta">
+            <div class="idx">2025</div>
+            <h3>Supervision complète avec alertes</h3>
+            <div class="tagline">Observabilité niveau production</div>
+          </div>
+          <ul>
+            <li>Déploiement d'une chaîne d'observabilité de niveau production avec Grafana, Prometheus et Node Exporter pour des métriques d'infrastructure en temps réel.</li>
+            <li>Intégration de Loki et Promtail pour la centralisation des journaux, permettant une analyse corrélée des métriques et des logs depuis un tableau de bord unique.</li>
+            <li>Configuration d'Alertmanager avec notifications multicanales (email, webhook) pour des alertes basées sur des seuils et des anomalies.</li>
+            <li>Création de tableaux de bord Grafana personnalisés couvrant le CPU, la mémoire, le disque, le débit réseau et l'état des services sur plusieurs hôtes.</li>
+          </ul>
+        </div>
+
+        <div class="project reveal">
+          <div class="project-meta">
+            <div class="idx">2025</div>
+            <h3>Répartition de charge &amp; basculement</h3>
+            <div class="tagline">Haute disponibilité</div>
+          </div>
+          <ul>
+            <li>Conception et déploiement d'une solution de répartition de charge à double pile utilisant Nginx et HAProxy avec basculement actif-passif.</li>
+            <li>Configuration de contrôles de santé et de basculement automatique — le trafic est redirigé en quelques secondes en cas de défaillance d'un nœud.</li>
+            <li>Mise en œuvre de stratégies round-robin, least-connections et IP-hash selon les types de services.</li>
+            <li>Validation dans des scénarios de panne simulés, avec zéro interruption perçue lors des transitions de nœuds.</li>
+          </ul>
+        </div>
+
+        <div class="project reveal">
+          <div class="project-meta">
+            <div class="idx">2025</div>
+            <h3>Infrastructure VoIP d'entreprise</h3>
+            <div class="tagline">Voix sur IP &amp; QoS</div>
+          </div>
+          <ul>
+            <li>Déploiement d'un système VoIP complet avec extensions SIP, plans de numérotation et routage d'appels inter-agences.</li>
+            <li>Configuration de trunks SIP, de codecs (G.711/G.729) et de politiques QoS pour prioriser le trafic voix sur le réseau de données.</li>
+            <li>Intégration de la VoIP avec la segmentation VLAN existante afin d'isoler le trafic voix et d'éviter toute dégradation de la qualité.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <div class="eyebrow">Terrain</div>
+          <h2>Expérience</h2>
+        </div>
+        <div class="note">Stage professionnel, compétition nationale de cybersécurité et représentation nationale à WorldSkills.</div>
+      </div>
+
+      <div class="timeline">
+        <div class="tl-item reveal">
+          <div class="tl-date">Oct. 2025 – Mars 2026</div>
+          <h3>Stage en sécurité informatique</h3>
+          <div class="org">Algérie Télécom — Département Sécurité IT · Mohammadia, Alger</div>
+          <ul>
+            <li>A travaillé directement au sein du département Sécurité IT de l'opérateur télécom national algérien.</li>
+            <li>A participé à la gestion des politiques de pare-feu, à l'analyse du trafic réseau et aux activités d'évaluation des vulnérabilités.</li>
+            <li>A contribué aux processus de réponse aux incidents, à l'analyse des journaux et au durcissement de la sécurité des serveurs de production.</li>
+            <li>A acquis une expérience des opérations de sécurité de niveau entreprise dans un environnement d'infrastructure nationale critique.</li>
+          </ul>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-date">Décembre 2025</div>
+          <h3>Hackathon de cybersécurité Cybears</h3>
+          <div class="org">Cybears — Alger</div>
+          <ul>
+            <li>A participé à une compétition nationale de cybersécurité avec des épreuves offensives et défensives de type CTF.</li>
+            <li>A mis en application ses compétences en tests d'intrusion, informatique légale (forensics), analyse de journaux et exploitation de vulnérabilités en conditions de compétition.</li>
+          </ul>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-date">Avril 2026</div>
+          <h3>WorldSkills — Administration des systèmes réseau IT</h3>
+          <div class="org">WorldSkills Algérie — Alger</div>
+          <ul>
+            <li>A représenté l'Algérie lors d'une compétition de compétences axée sur l'infrastructure réseau d'entreprise et l'administration système.</li>
+            <li>A configuré et présenté des architectures réseau complètes incluant le routage, la commutation, le VPN, l'Active Directory et la gestion de serveurs.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION + LANGUAGES -->
+  <section id="education">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <div class="eyebrow">Fondations</div>
+          <h2>Formation &amp; langues</h2>
+        </div>
+      </div>
+
+      <div class="split-grid reveal">
+        <div class="edu-block">
+          <div class="edu-item">
+            <div class="tl-date">Août 2024 – Avril 2026</div>
+            <h3>Technicien Supérieur — Administration et Sécurité des Réseaux Internet</h3>
+            <div class="org">Institut National Mohamed Taib Boussena — Mohammadia, Alger</div>
+            <ul>
+              <li>Diplômé major de promotion avec une moyenne finale de 18/20.</li>
+              <li>Spécialisation en administration réseau, cybersécurité, gestion de serveurs Linux/Windows et protocoles de sécurité.</li>
+              <li>Projet de fin d'études : Réseau cognitif auto-réparateur — infrastructure pilotée par l'IA avec réponse automatisée aux menaces (Note : 18/20).</li>
+            </ul>
+            <div class="cert-badge">✓ Certification NESDA TRIE — obtenue Mars 2025</div>
+          </div>
+          <div class="edu-item">
+            <div class="tl-date">Août 2019 – Juin 2023</div>
+            <h3>Terminale</h3>
+            <div class="org">Lycée Boukhlil — Khraicia, Alger</div>
+          </div>
+        </div>
+
+        <div class="lang-block">
+          <div class="lang-item">
+            <div class="head"><span class="name">Arabe</span><span class="level">Langue maternelle</span></div>
+            <div class="bar"><span style="width:100%"></span></div>
+          </div>
+          <div class="lang-item">
+            <div class="head"><span class="name">Anglais</span><span class="level">B2</span></div>
+            <div class="bar"><span style="width:75%"></span></div>
+          </div>
+          <div class="lang-item">
+            <div class="head"><span class="name">Français</span><span class="level">Intermédiaire</span></div>
+            <div class="bar"><span style="width:55%"></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <footer id="contact">
+    <div class="wrap">
+      <div class="contact-inner reveal">
+        <div class="eyebrow" style="justify-content:center;">Prochaine étape</div>
+        <h2>Discutons de votre infrastructure.</h2>
+        <p>Disponible pour des postes en administration réseau, sécurité opérationnelle (SOC) ou ingénierie infrastructure — à Alger ou à distance.</p>
+        <div class="contact-actions">
+          <a href="mailto:belguermimustapha@gmail.com" class="btn btn-primary">belguermimustapha@gmail.com</a>
+          <a href="tel:+213698509948" class="btn btn-ghost">+213 698 50 99 48</a>
+        </div>
+      </div>
+
+      <div class="foot-row wrap" style="padding-left:0; padding-right:0;">
+        <div>© 2026 Belguermi Mustapha — Birtouta, Alger, Algérie</div>
+        <div class="foot-links">
+          <a href="mailto:belguermimustapha@gmail.com">Email</a>
+          <a href="tel:+213698509948">Téléphone</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</main>
+
+<script>
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold:0.12});
+  revealEls.forEach(el=>io.observe(el));
+
+  // ---- Self-healing network animation ----
+  const linkIds = ['l-A-C','l-C-E','l-A-B','l-B-D','l-D-E','l-D-F','l-E-F','l-C-D'];
+  const failLink = 'l-D-E'; // link that fails
+  const rerouteEl = document.getElementById('reroute');
+  const logEl = document.getElementById('demoLog');
+  let playing = false;
+
+  function resetViz(){
+    linkIds.forEach(id=>{
+      const el = document.getElementById(id);
+      el.setAttribute('stroke', 'var(--line-strong)');
+      el.removeAttribute('stroke-dasharray');
+      el.style.filter = 'none';
+    });
+    rerouteEl.style.opacity = 0;
+    rerouteEl.setAttribute('stroke-dashoffset', '0');
+    logEl.innerHTML = '';
+  }
+
+  function logLine(text, cls, delay){
+    return new Promise(resolve=>{
+      setTimeout(()=>{
+        const div = document.createElement('div');
+        div.className = 'line ' + (cls||'');
+        div.textContent = text;
+        logEl.appendChild(div);
+        requestAnimationFrame(()=>div.classList.add('show'));
+        resolve();
+      }, delay);
+    });
+  }
+
+  async function playSequence(){
+    if(playing) return;
+    playing = true;
+    resetViz();
+
+    // healthy links glow briefly
+    linkIds.forEach(id=>{
+      document.getElementById(id).setAttribute('stroke', '#2A3557');
+    });
+
+    await logLine('$ monitor --watch topology', 'mono', 200);
+    await logLine('[OK] all links nominal — 8/8 up', 'ok', 700);
+    await logLine('[WARN] latency spike on SRV-01 ⇄ CORE-2 (D–E)', 'warn', 1600);
+
+    const failEl = document.getElementById(failLink);
+    failEl.setAttribute('stroke', 'var(--red)');
+    failEl.setAttribute('stroke-dasharray', '5 5');
+
+    await logLine('[FAIL] link D–E DOWN — packet loss 100%', 'warn', 2400);
+    await logLine('[AI] anomaly detected → computing alternate path…', 'fix', 3200);
+
+    // draw reroute path
+    rerouteEl.style.opacity = 1;
+    const length = rerouteEl.getTotalLength();
+    rerouteEl.style.strokeDasharray = length;
+    rerouteEl.style.strokeDashoffset = length;
+    rerouteEl.style.transition = 'stroke-dashoffset 1.1s ease';
+    requestAnimationFrame(()=>{
+      rerouteEl.style.strokeDashoffset = 0;
+    });
+
+    await logLine('[FIX] rerouted via CORE-2 → SRV-02 → SRV-01 · 42ms', 'fix', 4400);
+    await logLine('[OK] service restored — zero downtime perceived', 'ok', 5300);
+
+    playing = false;
+  }
+
+  document.getElementById('replayBtn').addEventListener('click', playSequence);
+
+  // auto-play once network section scrolls into view
+  const netviz = document.getElementById('netviz');
+  const netIO = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        playSequence();
+        netIO.unobserve(e.target);
+      }
+    });
+  }, {threshold:0.4});
+  netIO.observe(netviz);
+</script>
+
+</body>
+</html>
