@@ -594,14 +594,17 @@
   <nav class="wrap">
     <div class="brand"><span class="dot"></span>BELGUERMI<span style="color:var(--text-faint)">.MUSTAPHA</span></div>
     <div class="navlinks">
-      <a href="#about">Profil</a>
-      <a href="#skills">Compétences</a>
-      <a href="#network">Auto-réparation</a>
-      <a href="#projects">Projets</a>
-      <a href="#experience">Expérience</a>
-      <a href="#education">Formation</a>
+      <a href="#about" data-en="Profile">Profil</a>
+      <a href="#skills" data-en="Skills">Compétences</a>
+      <a href="#network" data-en="Self-Healing">Auto-réparation</a>
+      <a href="#projects" data-en="Projects">Projets</a>
+      <a href="#experience" data-en="Experience">Expérience</a>
+      <a href="#education" data-en="Education">Formation</a>
     </div>
-    <a href="#contact" class="nav-cta">Contact →</a>
+    <div style="display:flex; align-items:center; gap:12px;">
+      <button id="langToggle" class="nav-cta" style="cursor:pointer; background:transparent;" aria-label="Switch language">FR <span style="color:var(--text-faint)">/</span> <span style="color:var(--cyan)">EN</span></button>
+      <a href="#contact" class="nav-cta" data-en="Contact →">Contact →</a>
+    </div>
   </nav>
 </header>
 
@@ -610,26 +613,26 @@
   <section class="hero" style="border-top:none; padding-top:168px;">
     <div class="wrap hero-grid">
       <div>
-        <div class="eyebrow">Disponible pour opportunités · Alger, Algérie</div>
+        <div class="eyebrow" data-en="Open to opportunities · Algiers, Algeria">Disponible pour opportunités · Alger, Algérie</div>
         <h1>Belguermi<br>Mustapha<span class="accent">.</span></h1>
-        <div class="role">Ingénieur Réseaux &amp; Cybersécurité — Infrastructures auto-réparatrices</div>
-        <p class="lede">Je conçois des réseaux qui se défendent et se réparent eux-mêmes : supervision temps réel, détection d'anomalies par IA, haute disponibilité et durcissement de la sécurité — du datacenter jusqu'au poste de travail.</p>
+        <div class="role" data-en="Network &amp; Cybersecurity Engineer — Self-Healing Infrastructures">Ingénieur Réseaux &amp; Cybersécurité — Infrastructures auto-réparatrices</div>
+        <p class="lede" data-en="I build networks that defend and repair themselves: real-time monitoring, AI-driven anomaly detection, high availability, and security hardening — from the datacenter to the end-user workstation.">Je conçois des réseaux qui se défendent et se réparent eux-mêmes : supervision temps réel, détection d'anomalies par IA, haute disponibilité et durcissement de la sécurité — du datacenter jusqu'au poste de travail.</p>
         <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary">Voir mes projets ↓</a>
-          <a href="BELGUERMI_Mustapha_CV-.pdf" class="btn btn-ghost" download>Télécharger le CV (PDF)</a>
+          <a href="#projects" class="btn btn-primary" data-en="View my projects ↓">Voir mes projets ↓</a>
+          <a href="BELGUERMI_Mustapha_CV-.pdf" class="btn btn-ghost" download data-en="Download CV (PDF)">Télécharger le CV (PDF)</a>
         </div>
         <div class="stat-row">
           <div class="stat">
             <div class="num"><span>18</span>/20</div>
-            <div class="label">Major de promotion</div>
+            <div class="label" data-en="Top of class">Major de promotion</div>
           </div>
           <div class="stat">
-            <div class="num">Stage Pratique</div>
-            <div class="label">6 Mois — Algérie Télécom</div>
+            <div class="num" data-en="Internship">Stage Pratique</div>
+            <div class="label" data-en="6 Months — Algérie Télécom">6 Mois — Algérie Télécom</div>
           </div>
           <div class="stat">
-            <div class="num" style="font-size:16px; line-height:1.35;">Technicien Supérieur</div>
-            <div class="label">Admin. &amp; Sécurité des Réseaux Internet</div>
+            <div class="num" style="font-size:16px; line-height:1.35;" data-en="Higher Technician">Technicien Supérieur</div>
+            <div class="label" data-en="Internet Network Admin &amp; Security">Admin. &amp; Sécurité des Réseaux Internet</div>
           </div>
         </div>
       </div>
@@ -651,17 +654,17 @@
           <img src="portrait.jpg" alt="Portrait de Belguermi Mustapha en costume, debout dans un environnement de sécurité informatique.">
         </div>
         <div class="about-text reveal">
-          <div class="eyebrow">Profil</div>
-          <h2 style="font-family:var(--font-display); font-size:clamp(26px,3vw,34px); font-weight:700; margin:14px 0 22px;">Du réseau qui tombe au réseau qui se corrige.</h2>
-          <p><strong>Ingénieur en réseaux et cybersécurité orienté résultats</strong>, titulaire d'un diplôme de Technicien Supérieur obtenu major de promotion (18/20). Spécialisé dans les infrastructures réseau intelligentes, les systèmes d'auto-réparation basés sur l'IA et l'automatisation de la cybersécurité.</p>
-          <p>Expérience pratique dans la conception de solutions de supervision complètes, d'architectures réseau d'entreprise, de répartiteurs de charge à haute disponibilité et de systèmes VoIP. A effectué un stage professionnel au sein du <strong>département Sécurité IT d'Algérie Télécom</strong>, l'opérateur télécom national.</p>
-          <p>Compétences éprouvées en conditions réelles : compétition nationale de cybersécurité <strong>Cybears (CTF)</strong> et représentation de l'Algérie à la compétition <strong>WorldSkills</strong> en administration des systèmes réseau.</p>
+          <div class="eyebrow" data-en="Profile">Profil</div>
+          <h2 style="font-family:var(--font-display); font-size:clamp(26px,3vw,34px); font-weight:700; margin:14px 0 22px;" data-en="From a network that fails to a network that heals itself.">Du réseau qui tombe au réseau qui se corrige.</h2>
+          <p data-en="<strong>Results-driven Network and Cybersecurity Engineer</strong>, holder of a Higher Technician diploma earned top of the class (18/20). Specialized in intelligent network infrastructures, AI-based self-healing systems, and cybersecurity automation."><strong>Ingénieur en réseaux et cybersécurité orienté résultats</strong>, titulaire d'un diplôme de Technicien Supérieur obtenu major de promotion (18/20). Spécialisé dans les infrastructures réseau intelligentes, les systèmes d'auto-réparation basés sur l'IA et l'automatisation de la cybersécurité.</p>
+          <p data-en="Hands-on experience designing comprehensive monitoring solutions, enterprise network architectures, high-availability load balancers, and VoIP systems. Completed a professional internship within the <strong>IT Security department of Algérie Télécom</strong>, the national telecom operator.">Expérience pratique dans la conception de solutions de supervision complètes, d'architectures réseau d'entreprise, de répartiteurs de charge à haute disponibilité et de systèmes VoIP. A effectué un stage professionnel au sein du <strong>département Sécurité IT d'Algérie Télécom</strong>, l'opérateur télécom national.</p>
+          <p data-en="Skills proven under real conditions: the national cybersecurity competition <strong>Cybears (CTF)</strong>, and representing Algeria at the <strong>WorldSkills</strong> competition in network systems administration.">Compétences éprouvées en conditions réelles : compétition nationale de cybersécurité <strong>Cybears (CTF)</strong> et représentation de l'Algérie à la compétition <strong>WorldSkills</strong> en administration des systèmes réseau.</p>
 
           <div class="facts">
-            <div class="fact"><div class="k">Localisation</div><div class="v">Birtouta, Alger, Algérie</div></div>
-            <div class="fact"><div class="k">Né le</div><div class="v">25/10/2004</div></div>
+            <div class="fact"><div class="k" data-en="Location">Localisation</div><div class="v" data-en="Birtouta, Algiers, Algeria">Birtouta, Alger, Algérie</div></div>
+            <div class="fact"><div class="k" data-en="Born">Né le</div><div class="v">25/10/2004</div></div>
             <div class="fact"><div class="k">Email</div><div class="v">belguermimustapha@gmail.com</div></div>
-            <div class="fact"><div class="k">Téléphone</div><div class="v">+213 698 50 99 48</div></div>
+            <div class="fact"><div class="k" data-en="Phone">Téléphone</div><div class="v">+213 698 50 99 48</div></div>
           </div>
         </div>
       </div>
@@ -673,44 +676,44 @@
     <div class="wrap">
       <div class="section-head reveal">
         <div>
-          <div class="eyebrow">Boîte à outils</div>
-          <h2>Compétences techniques</h2>
+          <div class="eyebrow" data-en="Toolbox">Boîte à outils</div>
+          <h2 data-en="Technical Skills">Compétences techniques</h2>
         </div>
-        <div class="note">Classées par domaine — de la détection d'anomalies par IA jusqu'à l'administration système bas niveau.</div>
+        <div class="note" data-en="Grouped by domain — from AI-driven anomaly detection down to low-level system administration.">Classées par domaine — de la détection d'anomalies par IA jusqu'à l'administration système bas niveau.</div>
       </div>
 
       <div class="skills-grid reveal">
         <div class="skill-cat">
-          <h3>IA &amp; Systèmes intelligents</h3>
+          <h3 data-en="AI &amp; Intelligent Systems">IA &amp; Systèmes intelligents</h3>
           <div class="tag-list">
-            <span class="tag">Machine Learning (Réseaux)</span>
+            <span class="tag" data-en="Machine Learning (Networking)">Machine Learning (Réseaux)</span>
             <span class="tag">Auto-réparation (Self-Healing)</span>
-            <span class="tag">Détection d'anomalies</span>
-            <span class="tag">IDS basé sur l'IA</span>
+            <span class="tag" data-en="Anomaly Detection">Détection d'anomalies</span>
+            <span class="tag" data-en="AI-based IDS">IDS basé sur l'IA</span>
           </div>
         </div>
         <div class="skill-cat">
-          <h3>Supervision &amp; Observabilité</h3>
+          <h3 data-en="Monitoring &amp; Observability">Supervision &amp; Observabilité</h3>
           <div class="tag-list">
             <span class="tag">Grafana</span>
             <span class="tag">Prometheus</span>
             <span class="tag">Loki</span>
             <span class="tag">Node Exporter</span>
             <span class="tag">Promtail</span>
-            <span class="tag">Alertes &amp; Notifications</span>
+            <span class="tag" data-en="Alerts &amp; Notifications">Alertes &amp; Notifications</span>
           </div>
         </div>
         <div class="skill-cat">
-          <h3>Haute disponibilité &amp; Charge</h3>
+          <h3 data-en="High Availability &amp; Load Balancing">Haute disponibilité &amp; Charge</h3>
           <div class="tag-list">
             <span class="tag">Nginx</span>
             <span class="tag">HAProxy</span>
             <span class="tag">Architecture Failover</span>
-            <span class="tag">Répartition de charge</span>
+            <span class="tag" data-en="Load Balancing">Répartition de charge</span>
           </div>
         </div>
         <div class="skill-cat">
-          <h3>Pare-feu &amp; Sécurité</h3>
+          <h3 data-en="Firewall &amp; Security">Pare-feu &amp; Sécurité</h3>
           <div class="tag-list">
             <span class="tag">FortiGate</span>
             <span class="tag">IDS / IPS</span>
@@ -719,26 +722,26 @@
           </div>
         </div>
         <div class="skill-cat">
-          <h3>Tests d'intrusion (Pentest)</h3>
+          <h3 data-en="Penetration Testing (Pentest)">Tests d'intrusion (Pentest)</h3>
           <div class="tag-list">
             <span class="tag">Metasploit</span>
             <span class="tag">Nmap</span>
             <span class="tag">Nikto</span>
-            <span class="tag">Reconnaissance réseau</span>
-            <span class="tag">Scan de vulnérabilités</span>
+            <span class="tag" data-en="Network Reconnaissance">Reconnaissance réseau</span>
+            <span class="tag" data-en="Vulnerability Scanning">Scan de vulnérabilités</span>
           </div>
         </div>
         <div class="skill-cat">
-          <h3>Forensics &amp; Réponse aux incidents</h3>
+          <h3 data-en="Forensics &amp; Incident Response">Forensics &amp; Réponse aux incidents</h3>
           <div class="tag-list">
             <span class="tag">Wireshark</span>
-            <span class="tag">Informatique légale</span>
-            <span class="tag">Analyse de journaux</span>
-            <span class="tag">Réponse aux incidents</span>
+            <span class="tag" data-en="Digital Forensics">Informatique légale</span>
+            <span class="tag" data-en="Log Analysis">Analyse de journaux</span>
+            <span class="tag" data-en="Incident Response">Réponse aux incidents</span>
           </div>
         </div>
         <div class="skill-cat">
-          <h3>Réseaux</h3>
+          <h3 data-en="Networking">Réseaux</h3>
           <div class="tag-list">
             <span class="tag">RIP / OSPF</span>
             <span class="tag">ACL</span>
@@ -754,7 +757,7 @@
           </div>
         </div>
         <div class="skill-cat">
-          <h3>Systèmes &amp; Outils</h3>
+          <h3 data-en="Systems &amp; Tools">Systèmes &amp; Outils</h3>
           <div class="tag-list">
             <span class="tag">Windows Server</span>
             <span class="tag">Linux / Ubuntu</span>
@@ -777,11 +780,11 @@
     <div class="wrap">
       <div class="demo-inner">
         <div class="demo-copy reveal">
-          <div class="eyebrow">Signature — Projet de fin d'études</div>
-          <h2 style="font-family:var(--font-display); font-size:clamp(26px,3vw,34px); font-weight:700; margin:14px 0 6px;">Réseau cognitif auto-réparateur</h2>
-          <p>Une infrastructure pilotée par l'IA, entraînée sur les schémas de trafic réseau pour détecter les anomalies, prédire les pannes et reconfigurer le routage — sans intervention humaine. Noté 18/20, projet classé 1er de la promotion. Cliquez pour rejouer la panne.</p>
+          <div class="eyebrow" data-en="Signature — Final Year Project">Signature — Projet de fin d'études</div>
+          <h2 style="font-family:var(--font-display); font-size:clamp(26px,3vw,34px); font-weight:700; margin:14px 0 6px;" data-en="Self-Healing Cognitive Network">Réseau cognitif auto-réparateur</h2>
+          <p data-en="An AI-driven infrastructure, trained on network traffic patterns to detect anomalies, predict failures, and reconfigure routing — with no human intervention. Graded 18/20, ranked 1st in class. Click to replay the failure.">Une infrastructure pilotée par l'IA, entraînée sur les schémas de trafic réseau pour détecter les anomalies, prédire les pannes et reconfigurer le routage — sans intervention humaine. Noté 18/20, projet classé 1er de la promotion. Cliquez pour rejouer la panne.</p>
           <div class="demo-log" id="demoLog"></div>
-          <button class="replay-btn" id="replayBtn">↻ Rejouer la panne / auto-réparation</button>
+          <button class="replay-btn" id="replayBtn" data-en="↻ Replay the failure / self-healing">↻ Rejouer la panne / auto-réparation</button>
         </div>
         <div class="netviz reveal" id="netviz">
           <svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg">
@@ -819,66 +822,66 @@
     <div class="wrap">
       <div class="section-head reveal">
         <div>
-          <div class="eyebrow">Réalisations</div>
-          <h2>Projets</h2>
+          <div class="eyebrow" data-en="Achievements">Réalisations</div>
+          <h2 data-en="Projects">Projets</h2>
         </div>
-        <div class="note">Projets de laboratoire et de recherche personnelle, conçus dans des conditions proches de la production.</div>
+        <div class="note" data-en="Lab and personal research projects, built under conditions close to production.">Projets de laboratoire et de recherche personnelle, conçus dans des conditions proches de la production.</div>
       </div>
 
       <div class="project-list">
         <div class="project reveal">
           <div class="project-meta">
             <div class="idx">2025 – 2026</div>
-            <h3>Réseau cognitif auto-réparateur</h3>
-            <div class="tagline">Infrastructure pilotée par l'IA</div>
+            <h3 data-en="Self-Healing Cognitive Network">Réseau cognitif auto-réparateur</h3>
+            <div class="tagline" data-en="AI-driven infrastructure">Infrastructure pilotée par l'IA</div>
           </div>
           <ul>
-            <li>Conception et réalisation d'une infrastructure réseau pilotée par l'IA capable d'auto-réparation autonome et de réponse aux menaces en temps réel.</li>
-            <li>Intégration d'un modèle de Machine Learning entraîné sur les schémas de trafic réseau pour détecter les anomalies, prédire les pannes et reconfigurer automatiquement le routage.</li>
-            <li>Mise en place d'un mécanisme de blocage automatique des attaquants — le système identifie les comportements malveillants et applique dynamiquement des règles de pare-feu sans intervention humaine.</li>
-            <li>Architecture combinant des agents de supervision intelligents, un moteur d'inférence ML et des scripts de remédiation automatisée pour une résolution des incidents sans interruption de service.</li>
-            <li><strong style="color:var(--amber)">Projet de fin d'études — noté 18/20, classé 1er de la promotion.</strong></li>
+            <li data-en="Designed and built an AI-driven network infrastructure capable of autonomous self-healing and real-time threat response.">Conception et réalisation d'une infrastructure réseau pilotée par l'IA capable d'auto-réparation autonome et de réponse aux menaces en temps réel.</li>
+            <li data-en="Integrated a Machine Learning model trained on network traffic patterns to detect anomalies, predict failures, and automatically reconfigure routing.">Intégration d'un modèle de Machine Learning entraîné sur les schémas de trafic réseau pour détecter les anomalies, prédire les pannes et reconfigurer automatiquement le routage.</li>
+            <li data-en="Implemented an automatic attacker-blocking mechanism — the system identifies malicious behavior and dynamically applies firewall rules with no human intervention.">Mise en place d'un mécanisme de blocage automatique des attaquants — le système identifie les comportements malveillants et applique dynamiquement des règles de pare-feu sans intervention humaine.</li>
+            <li data-en="Architecture combining intelligent monitoring agents, an ML inference engine, and automated remediation scripts for incident resolution with zero service interruption.">Architecture combinant des agents de supervision intelligents, un moteur d'inférence ML et des scripts de remédiation automatisée pour une résolution des incidents sans interruption de service.</li>
+            <li><strong style="color:var(--amber)" data-en="Final year project — graded 18/20, ranked 1st in class.">Projet de fin d'études — noté 18/20, classé 1er de la promotion.</strong></li>
           </ul>
         </div>
 
         <div class="project reveal">
           <div class="project-meta">
             <div class="idx">2025</div>
-            <h3>Supervision complète avec alertes</h3>
-            <div class="tagline">Observabilité niveau production</div>
+            <h3 data-en="Comprehensive Monitoring with Alerts">Supervision complète avec alertes</h3>
+            <div class="tagline" data-en="Production-level observability">Observabilité niveau production</div>
           </div>
           <ul>
-            <li>Déploiement d'une chaîne d'observabilité de niveau production avec Grafana, Prometheus et Node Exporter pour des métriques d'infrastructure en temps réel.</li>
-            <li>Intégration de Loki et Promtail pour la centralisation des journaux, permettant une analyse corrélée des métriques et des logs depuis un tableau de bord unique.</li>
-            <li>Configuration d'Alertmanager avec notifications multicanales (email, webhook) pour des alertes basées sur des seuils et des anomalies.</li>
-            <li>Création de tableaux de bord Grafana personnalisés couvrant le CPU, la mémoire, le disque, le débit réseau et l'état des services sur plusieurs hôtes.</li>
+            <li data-en="Deployed a production-level observability stack with Grafana, Prometheus, and Node Exporter for real-time infrastructure metrics.">Déploiement d'une chaîne d'observabilité de niveau production avec Grafana, Prometheus et Node Exporter pour des métriques d'infrastructure en temps réel.</li>
+            <li data-en="Integrated Loki and Promtail for centralized log management, enabling correlated metrics-and-logs analysis from a single dashboard.">Intégration de Loki et Promtail pour la centralisation des journaux, permettant une analyse corrélée des métriques et des logs depuis un tableau de bord unique.</li>
+            <li data-en="Configured Alertmanager with multi-channel notifications (email, webhook) for threshold- and anomaly-based alerts.">Configuration d'Alertmanager avec notifications multicanales (email, webhook) pour des alertes basées sur des seuils et des anomalies.</li>
+            <li data-en="Built custom Grafana dashboards covering CPU, memory, disk, network throughput, and service health across multiple hosts.">Création de tableaux de bord Grafana personnalisés couvrant le CPU, la mémoire, le disque, le débit réseau et l'état des services sur plusieurs hôtes.</li>
           </ul>
         </div>
 
         <div class="project reveal">
           <div class="project-meta">
             <div class="idx">2025</div>
-            <h3>Répartition de charge &amp; basculement</h3>
-            <div class="tagline">Haute disponibilité</div>
+            <h3 data-en="Load Balancing &amp; Failover">Répartition de charge &amp; basculement</h3>
+            <div class="tagline" data-en="High availability">Haute disponibilité</div>
           </div>
           <ul>
-            <li>Conception et déploiement d'une solution de répartition de charge à double pile utilisant Nginx et HAProxy avec basculement actif-passif.</li>
-            <li>Configuration de contrôles de santé et de basculement automatique — le trafic est redirigé en quelques secondes en cas de défaillance d'un nœud.</li>
-            <li>Mise en œuvre de stratégies round-robin, least-connections et IP-hash selon les types de services.</li>
-            <li>Validation dans des scénarios de panne simulés, avec zéro interruption perçue lors des transitions de nœuds.</li>
+            <li data-en="Designed and deployed a dual-stack load balancing solution using Nginx and HAProxy with active-passive failover.">Conception et déploiement d'une solution de répartition de charge à double pile utilisant Nginx et HAProxy avec basculement actif-passif.</li>
+            <li data-en="Configured health checks and automatic failover — traffic is redirected within seconds of a node failure.">Configuration de contrôles de santé et de basculement automatique — le trafic est redirigé en quelques secondes en cas de défaillance d'un nœud.</li>
+            <li data-en="Implemented round-robin, least-connections, and IP-hash strategies depending on service type.">Mise en œuvre de stratégies round-robin, least-connections et IP-hash selon les types de services.</li>
+            <li data-en="Validated in simulated failure scenarios, with zero perceived downtime during node transitions.">Validation dans des scénarios de panne simulés, avec zéro interruption perçue lors des transitions de nœuds.</li>
           </ul>
         </div>
 
         <div class="project reveal">
           <div class="project-meta">
             <div class="idx">2025</div>
-            <h3>Infrastructure VoIP d'entreprise</h3>
-            <div class="tagline">Voix sur IP &amp; QoS</div>
+            <h3 data-en="Enterprise VoIP Infrastructure">Infrastructure VoIP d'entreprise</h3>
+            <div class="tagline" data-en="Voice over IP &amp; QoS">Voix sur IP &amp; QoS</div>
           </div>
           <ul>
-            <li>Déploiement d'un système VoIP complet avec extensions SIP, plans de numérotation et routage d'appels inter-agences.</li>
-            <li>Configuration de trunks SIP, de codecs (G.711/G.729) et de politiques QoS pour prioriser le trafic voix sur le réseau de données.</li>
-            <li>Intégration de la VoIP avec la segmentation VLAN existante afin d'isoler le trafic voix et d'éviter toute dégradation de la qualité.</li>
+            <li data-en="Deployed a complete VoIP system with SIP extensions, dial plans, and inter-branch call routing.">Déploiement d'un système VoIP complet avec extensions SIP, plans de numérotation et routage d'appels inter-agences.</li>
+            <li data-en="Configured SIP trunks, codecs (G.711/G.729), and QoS policies to prioritize voice traffic on the data network.">Configuration de trunks SIP, de codecs (G.711/G.729) et de politiques QoS pour prioriser le trafic voix sur le réseau de données.</li>
+            <li data-en="Integrated VoIP with existing VLAN segmentation to isolate voice traffic and prevent quality degradation.">Intégration de la VoIP avec la segmentation VLAN existante afin d'isoler le trafic voix et d'éviter toute dégradation de la qualité.</li>
           </ul>
         </div>
       </div>
@@ -890,42 +893,42 @@
     <div class="wrap">
       <div class="section-head reveal">
         <div>
-          <div class="eyebrow">Terrain</div>
-          <h2>Expérience</h2>
+          <div class="eyebrow" data-en="Field Experience">Terrain</div>
+          <h2 data-en="Experience">Expérience</h2>
         </div>
-        <div class="note">Stage professionnel, compétition nationale de cybersécurité et représentation nationale à WorldSkills.</div>
+        <div class="note" data-en="Professional internship, national cybersecurity competition, and national representation at WorldSkills.">Stage professionnel, compétition nationale de cybersécurité et représentation nationale à WorldSkills.</div>
       </div>
 
       <div class="timeline">
         <div class="tl-item reveal">
-          <div class="tl-date">Oct. 2025 – Mars 2026</div>
-          <h3>Stage en sécurité informatique</h3>
-          <div class="org">Algérie Télécom — Département Sécurité IT · Mohammadia, Alger</div>
+          <div class="tl-date" data-en="Oct. 2025 – Mar. 2026">Oct. 2025 – Mars 2026</div>
+          <h3 data-en="IT Security Internship">Stage en sécurité informatique</h3>
+          <div class="org" data-en="Algérie Télécom — IT Security Department · Mohammadia, Algiers">Algérie Télécom — Département Sécurité IT · Mohammadia, Alger</div>
           <ul>
-            <li>A travaillé directement au sein du département Sécurité IT de l'opérateur télécom national algérien.</li>
-            <li>A participé à la gestion des politiques de pare-feu, à l'analyse du trafic réseau et aux activités d'évaluation des vulnérabilités.</li>
-            <li>A contribué aux processus de réponse aux incidents, à l'analyse des journaux et au durcissement de la sécurité des serveurs de production.</li>
-            <li>A acquis une expérience des opérations de sécurité de niveau entreprise dans un environnement d'infrastructure nationale critique.</li>
+            <li data-en="Worked directly within the IT Security department of Algeria's national telecom operator.">A travaillé directement au sein du département Sécurité IT de l'opérateur télécom national algérien.</li>
+            <li data-en="Participated in firewall policy management, network traffic analysis, and vulnerability assessment activities.">A participé à la gestion des politiques de pare-feu, à l'analyse du trafic réseau et aux activités d'évaluation des vulnérabilités.</li>
+            <li data-en="Contributed to incident response processes, log analysis, and production server security hardening.">A contribué aux processus de réponse aux incidents, à l'analyse des journaux et au durcissement de la sécurité des serveurs de production.</li>
+            <li data-en="Gained experience with enterprise-level security operations within a critical national infrastructure environment.">A acquis une expérience des opérations de sécurité de niveau entreprise dans un environnement d'infrastructure nationale critique.</li>
           </ul>
         </div>
 
         <div class="tl-item reveal">
-          <div class="tl-date">Décembre 2025</div>
-          <h3>Hackathon de cybersécurité Cybears</h3>
-          <div class="org">Cybears — Alger</div>
+          <div class="tl-date" data-en="December 2025">Décembre 2025</div>
+          <h3 data-en="Cybears Cybersecurity Hackathon">Hackathon de cybersécurité Cybears</h3>
+          <div class="org" data-en="Cybears — Algiers">Cybears — Alger</div>
           <ul>
-            <li>A participé à une compétition nationale de cybersécurité avec des épreuves offensives et défensives de type CTF.</li>
-            <li>A mis en application ses compétences en tests d'intrusion, informatique légale (forensics), analyse de journaux et exploitation de vulnérabilités en conditions de compétition.</li>
+            <li data-en="Participated in a national cybersecurity competition featuring offensive and defensive CTF-style challenges.">A participé à une compétition nationale de cybersécurité avec des épreuves offensives et défensives de type CTF.</li>
+            <li data-en="Applied skills in penetration testing, digital forensics, log analysis, and vulnerability exploitation under competitive conditions.">A mis en application ses compétences en tests d'intrusion, informatique légale (forensics), analyse de journaux et exploitation de vulnérabilités en conditions de compétition.</li>
           </ul>
         </div>
 
         <div class="tl-item reveal">
-          <div class="tl-date">Avril 2026</div>
-          <h3>WorldSkills — Administration des systèmes réseau IT</h3>
-          <div class="org">WorldSkills Algérie — Alger</div>
+          <div class="tl-date" data-en="April 2026">Avril 2026</div>
+          <h3 data-en="WorldSkills — IT Network Systems Administration">WorldSkills — Administration des systèmes réseau IT</h3>
+          <div class="org" data-en="WorldSkills Algeria — Algiers">WorldSkills Algérie — Alger</div>
           <ul>
-            <li>A représenté l'Algérie lors d'une compétition de compétences axée sur l'infrastructure réseau d'entreprise et l'administration système.</li>
-            <li>A configuré et présenté des architectures réseau complètes incluant le routage, la commutation, le VPN, l'Active Directory et la gestion de serveurs.</li>
+            <li data-en="Represented Algeria in a skills competition focused on enterprise network infrastructure and system administration.">A représenté l'Algérie lors d'une compétition de compétences axée sur l'infrastructure réseau d'entreprise et l'administration système.</li>
+            <li data-en="Configured and presented complete network architectures including routing, switching, VPN, Active Directory, and server management.">A configuré et présenté des architectures réseau complètes incluant le routage, la commutation, le VPN, l'Active Directory et la gestion de serveurs.</li>
           </ul>
         </div>
       </div>
@@ -937,42 +940,42 @@
     <div class="wrap">
       <div class="section-head reveal">
         <div>
-          <div class="eyebrow">Fondations</div>
-          <h2>Formation &amp; langues</h2>
+          <div class="eyebrow" data-en="Foundations">Fondations</div>
+          <h2 data-en="Education &amp; Languages">Formation &amp; langues</h2>
         </div>
       </div>
 
       <div class="split-grid reveal">
         <div class="edu-block">
           <div class="edu-item">
-            <div class="tl-date">Août 2024 – Avril 2026</div>
-            <h3>Technicien Supérieur — Administration et Sécurité des Réseaux Internet</h3>
-            <div class="org">Institut National Mohamed Taib Boussena — Mohammadia, Alger</div>
+            <div class="tl-date" data-en="Aug. 2024 – Apr. 2026">Août 2024 – Avril 2026</div>
+            <h3 data-en="Higher Technician — Internet Network Administration and Security">Technicien Supérieur — Administration et Sécurité des Réseaux Internet</h3>
+            <div class="org" data-en="Institut National Mohamed Taib Boussena — Mohammadia, Algiers">Institut National Mohamed Taib Boussena — Mohammadia, Alger</div>
             <ul>
-              <li>Diplômé major de promotion avec une moyenne finale de 18/20.</li>
-              <li>Spécialisation en administration réseau, cybersécurité, gestion de serveurs Linux/Windows et protocoles de sécurité.</li>
-              <li>Projet de fin d'études : Réseau cognitif auto-réparateur — infrastructure pilotée par l'IA avec réponse automatisée aux menaces (Note : 18/20).</li>
+              <li data-en="Graduated top of the class with a final average of 18/20.">Diplômé major de promotion avec une moyenne finale de 18/20.</li>
+              <li data-en="Specialized in network administration, cybersecurity, Linux/Windows server management, and security protocols.">Spécialisation en administration réseau, cybersécurité, gestion de serveurs Linux/Windows et protocoles de sécurité.</li>
+              <li data-en="Final year project: Self-Healing Cognitive Network — AI-driven infrastructure with automated threat response (Grade: 18/20).">Projet de fin d'études : Réseau cognitif auto-réparateur — infrastructure pilotée par l'IA avec réponse automatisée aux menaces (Note : 18/20).</li>
             </ul>
-            <div class="cert-badge">✓ Certification NESDA TRIE — obtenue Mars 2025</div>
+            <div class="cert-badge" data-en="✓ NESDA TRIE Certification — obtained March 2025">✓ Certification NESDA TRIE — obtenue Mars 2025</div>
           </div>
           <div class="edu-item">
-            <div class="tl-date">Août 2019 – Juin 2023</div>
-            <h3>Terminale</h3>
-            <div class="org">Lycée Boukhlil — Khraicia, Alger</div>
+            <div class="tl-date" data-en="Aug. 2019 – Jun. 2023">Août 2019 – Juin 2023</div>
+            <h3 data-en="High School Diploma">Terminale</h3>
+            <div class="org" data-en="Lycée Boukhlil — Khraicia, Algiers">Lycée Boukhlil — Khraicia, Alger</div>
           </div>
         </div>
 
         <div class="lang-block">
           <div class="lang-item">
-            <div class="head"><span class="name">Arabe</span><span class="level">Langue maternelle</span></div>
+            <div class="head"><span class="name" data-en="Arabic">Arabe</span><span class="level" data-en="Native language">Langue maternelle</span></div>
             <div class="bar"><span style="width:100%"></span></div>
           </div>
           <div class="lang-item">
-            <div class="head"><span class="name">Anglais</span><span class="level">B2</span></div>
+            <div class="head"><span class="name" data-en="English">Anglais</span><span class="level">B2</span></div>
             <div class="bar"><span style="width:75%"></span></div>
           </div>
           <div class="lang-item">
-            <div class="head"><span class="name">Français</span><span class="level">Intermédiaire</span></div>
+            <div class="head"><span class="name" data-en="French">Français</span><span class="level" data-en="Intermediate">Intermédiaire</span></div>
             <div class="bar"><span style="width:55%"></span></div>
           </div>
         </div>
@@ -984,9 +987,9 @@
   <footer id="contact">
     <div class="wrap">
       <div class="contact-inner reveal">
-        <div class="eyebrow" style="justify-content:center;">Prochaine étape</div>
-        <h2>Discutons de votre infrastructure.</h2>
-        <p>Disponible pour des postes en administration réseau, sécurité opérationnelle (SOC) ou ingénierie infrastructure — à Alger ou à distance.</p>
+        <div class="eyebrow" style="justify-content:center;" data-en="Next step">Prochaine étape</div>
+        <h2 data-en="Let's talk about your infrastructure.">Discutons de votre infrastructure.</h2>
+        <p data-en="Available for roles in network administration, security operations (SOC), or infrastructure engineering — in Algiers or remote.">Disponible pour des postes en administration réseau, sécurité opérationnelle (SOC) ou ingénierie infrastructure — à Alger ou à distance.</p>
         <div class="contact-actions">
           <a href="mailto:belguermimustapha@gmail.com" class="btn btn-primary">belguermimustapha@gmail.com</a>
           <a href="tel:+213698509948" class="btn btn-ghost">+213 698 50 99 48</a>
@@ -994,10 +997,10 @@
       </div>
 
       <div class="foot-row wrap" style="padding-left:0; padding-right:0;">
-        <div>© 2026 Belguermi Mustapha — Birtouta, Alger, Algérie</div>
+        <div data-en="© 2026 Belguermi Mustapha — Birtouta, Algiers, Algeria">© 2026 Belguermi Mustapha — Birtouta, Alger, Algérie</div>
         <div class="foot-links">
           <a href="mailto:belguermimustapha@gmail.com">Email</a>
-          <a href="tel:+213698509948">Téléphone</a>
+          <a href="tel:+213698509948" data-en="Phone">Téléphone</a>
         </div>
       </div>
     </div>
@@ -1005,6 +1008,33 @@
 </main>
 
 <script>
+  // ---- Language toggle (FR / EN) ----
+  const translatable = document.querySelectorAll('[data-en]');
+  translatable.forEach(el => { el.dataset.fr = el.innerHTML; });
+
+  let currentLang = localStorage.getItem('site-lang') || 'fr';
+
+  function applyLang(lang){
+    translatable.forEach(el => {
+      el.innerHTML = lang === 'en' ? el.dataset.en : el.dataset.fr;
+    });
+    document.documentElement.lang = lang;
+    const btn = document.getElementById('langToggle');
+    if(lang === 'en'){
+      btn.innerHTML = '<span style="color:var(--cyan)">FR</span> <span style="color:var(--text-faint)">/</span> EN';
+    } else {
+      btn.innerHTML = 'FR <span style="color:var(--text-faint)">/</span> <span style="color:var(--cyan)">EN</span>';
+    }
+    localStorage.setItem('site-lang', lang);
+    currentLang = lang;
+  }
+
+  document.getElementById('langToggle').addEventListener('click', () => {
+    applyLang(currentLang === 'fr' ? 'en' : 'fr');
+  });
+
+  applyLang(currentLang);
+
   // Scroll reveal
   const revealEls = document.querySelectorAll('.reveal');
   const io = new IntersectionObserver((entries)=>{
